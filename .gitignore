@@ -1,0 +1,14 @@
+# Secrets — NEVER commit these / НИКОГДА не коммитьте
+.env
+_env
+
+# Runtime data created by the bot
+config.json
+admins_extra.json
+mappings_extra.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
