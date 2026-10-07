@@ -46,28 +46,58 @@ The bot logs in as a regular Discord **user account** (not an official bot appli
 
 ## Requirements
 
-- Python **3.9+**
+- Python **3.9+** (Git is optional)
 - A Discord account (preferably a **second / spare** one) that is a member of all relevant servers
 - Packages from `requirements.txt`: `discord.py-self`, `python-dotenv`
 
 ## Installation
 
+You need **Python 3.9+** ([download](https://www.python.org/downloads/)). On Windows, tick **"Add Python to PATH"** in the installer, otherwise the `python` and `pip` commands won't be found. **Git is not required.**
+
+### Step 1 — Download the project
+
+**Option A — without Git (easiest):**
+1. Open the repository page: <https://github.com/Leobog90000/discord-userbot-forwarder>
+2. Click the green **Code** button → **Download ZIP**.
+3. Unzip the archive anywhere (e.g. `C:\discord-userbot-forwarder`) and open the unzipped folder.
+
+**Option B — with Git:**
 ```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-
-# 2. (Optional) create a virtual environment
-python -m venv venv
-# Windows:  venv\Scripts\activate
-# Linux/macOS:  source venv/bin/activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Create your .env file from the example
-cp .env.example .env        # Windows: copy .env.example .env
+git clone https://github.com/Leobog90000/discord-userbot-forwarder.git
+cd dsuserbot
 ```
+
+### Step 2 — Open a terminal in the project folder
+
+- **Windows:** open the project folder in Explorer, click the address bar, type `cmd` and press **Enter**.
+- **Linux/macOS:** open Terminal and `cd` into the folder.
+
+All commands below are typed into this terminal, one at a time.
+
+### Step 3 — (Optional) virtual environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate          # Windows
+source venv/bin/activate        # Linux/macOS
+```
+`(venv)` will appear at the start of the line. You must repeat the `activate` command each time you open a new terminal.
+
+### Step 4 — Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 5 — Create the `.env` file
+
+```bash
+copy .env.example .env          # Windows (cmd)
+cp .env.example .env            # Linux/macOS
+```
+Then open `.env` in any text editor and put your token in it (see the next section).
+
+> 💡 If you can't see `.env.example`, enable hidden files in Explorer: **View → Show → Hidden items**. You can also simply copy the file by hand and rename the copy to `.env`.
 
 ## Getting the user token
 

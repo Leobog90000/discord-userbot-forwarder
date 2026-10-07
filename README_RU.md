@@ -46,28 +46,58 @@
 
 ## Требования
 
-- Python **3.9+**
+- Python **3.9+** (Git по желанию)
 - Аккаунт Discord (лучше **второй / запасной**), состоящий на всех нужных серверах
 - Пакеты из `requirements.txt`: `discord.py-self`, `python-dotenv`
 
 ## Установка
 
+Нужен **Python 3.9+** ([скачать](https://www.python.org/downloads/)). В Windows при установке поставьте галочку **«Add Python to PATH»**, иначе команды `python` и `pip` не будут найдены. **Git не нужен.**
+
+### Шаг 1 — Скачайте проект
+
+**Вариант А — без Git (самый простой):**
+1. Откройте страницу репозитория: <https://github.com/Leobog90000/discord-userbot-forwarder>
+2. Нажмите зелёную кнопку **Code** → **Download ZIP**.
+3. Распакуйте архив в любую папку (например, `C:\discord-userbot-forwarder`) и откройте распакованную папку.
+
+**Вариант Б — через Git:**
 ```bash
-# 1. Клонируйте репозиторий
-git clone https://github.com/<ваш-ник>/<ваш-репозиторий>.git
-cd <ваш-репозиторий>
-
-# 2. (По желанию) создайте виртуальное окружение
-python -m venv venv
-# Windows:  venv\Scripts\activate
-# Linux/macOS:  source venv/bin/activate
-
-# 3. Установите зависимости
-pip install -r requirements.txt
-
-# 4. Создайте файл .env из примера
-cp .env.example .env        # Windows: copy .env.example .env
+git clone https://github.com/Leobog90000/discord-userbot-forwarder.git
+cd dsuserbot
 ```
+
+### Шаг 2 — Откройте терминал в папке проекта
+
+- **Windows:** откройте папку проекта в Проводнике, нажмите на адресную строку, впишите `cmd` и нажмите **Enter**.
+- **Linux/macOS:** откройте Terminal и перейдите в папку командой `cd`.
+
+Все команды ниже вводятся в этот терминал по одной.
+
+### Шаг 3 — (По желанию) виртуальное окружение
+
+```bash
+python -m venv venv
+venv\Scripts\activate          # Windows
+source venv/bin/activate        # Linux/macOS
+```
+В начале строки появится `(venv)`. Команду `activate` нужно повторять при каждом новом открытии терминала.
+
+### Шаг 4 — Установите зависимости
+
+```bash
+pip install -r requirements.txt
+```
+
+### Шаг 5 — Создайте файл `.env`
+
+```bash
+copy .env.example .env          # Windows (cmd)
+cp .env.example .env            # Linux/macOS
+```
+Затем откройте `.env` в любом текстовом редакторе и вставьте свой токен (см. следующий раздел).
+
+> 💡 Если не видите `.env.example`, включите показ скрытых файлов в Проводнике: **Вид → Показать → Скрытые элементы**. Файл также можно просто скопировать вручную и переименовать копию в `.env`.
 
 ## Как получить токен
 
